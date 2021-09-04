@@ -1,0 +1,86 @@
+.header {
+    background-color: $darkBrown;
+    z-index: 1;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    &.open {
+        .header__toggle {
+            span:first-child {
+                transform: rotate(45deg);
+            }
+            span:nth-child(2) {
+                opacity: 0;
+            }
+            span:last-child {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    .overlay {
+        opacity: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: linear-gradient($darkBrown, transparent);
+    }
+    nav {
+        position: relative;
+        padding-top: 1.0625rem;
+        padding-bottom: 1.0625rem;
+        height: 5em;
+    }
+    &__logo {
+        .hide-for-mobile {
+            position: absolute;
+            top: 1em;
+        }
+        .hide-for-desktop {
+            position: relative;
+            top: .25em;
+        }
+    }
+    &__toggle {
+        //mobile menu toggle
+        span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background-color: $lightBrown;
+            transition: all 300ms ease-in-out;
+            transform-origin: 3px 1px;
+            &:not(:last-child) {
+                margin-bottom: 5px;
+            }
+        }
+    }
+    &__menu {
+        position: absolute;
+        width: calc(100% - 3rem);
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $lightBrown;
+        margin-top: 1.5rem;
+        border-radius: 5px;
+        padding: 1.625rem;
+        a {
+            display: block;
+            color: $darkBrown;
+            padding: 0.625rem;
+            display: block;
+            text-align: center;
+        }
+    }
+    &__links {
+        position: absolute;
+        left: 15rem;
+        a {
+            font-size: $font-med;
+            letter-spacing: 1px;
+            &:not(:last-child) {
+                margin-right: 32px;
+            }
+        }
+    }
+}

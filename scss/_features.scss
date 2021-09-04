@@ -1,0 +1,66 @@
+.feature {
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        @include breakpoint-up(medium) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include breakpoint-up(large) {
+            margin-top: 4rem;
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        padding: 0.975rem;
+        background-color: $mediumBrown;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 3px 1px 0 rgba(0, 0, 0, 0.19);
+    }
+    &__icon {
+        @include breakpoint-down(medium) {
+            align-self: center;
+            width: 40%;
+        }
+        margin-top: .5rem;
+        width: 20%;
+        @include breakpoint-up(large) {
+            overflow: visible;
+            position: relative;
+            height: 40px;
+            left: 10px;
+            bottom: 50px;
+            width: 40%;
+        }
+    }
+    &__title {
+        font-size: $font-med;
+        margin-bottom: .5rem;
+        letter-spacing: normal;
+        font-weight: 500;
+        color: $darkBrown;
+        @include breakpoint-down(medium) {
+            align-self: center;
+        }
+        @include breakpoint-up(large) {
+            align-self: flex-end;
+        }
+    }
+    &__button {
+        background-color: $darkBrown;
+        cursor: pointer;
+        padding: 8px;
+        color: $lightBrown;
+        outline: none;
+        border: 0;
+        border-radius: 5px;
+        @include breakpoint-up(large) {
+            height: auto;
+            width: 3rem;
+            align-self: flex-end;
+        }
+    }
+}
