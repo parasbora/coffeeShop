@@ -7,13 +7,13 @@
     }
     &__image {
         position: relative;
-        background-image: url(/images/backgroundMobile.svg);
+        background-image: url(../images/backgroundMobile.svg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
         min-height: 27rem;
         @include breakpoint-up(large) {
-            background-image: url(/images/backgroundDesktop.svg);
+            background-image: url(../images/backgroundDesktop.svg);
             height: 90vh;
             flex: 2.5;
         }
@@ -21,17 +21,17 @@
             content: "";
             width: 100%;
             position: absolute;
-            background-image: url(/images/heroMobile.svg);
+            background-image: url(../images/heroMobile.svg);
             background-size: 70%;
             background-repeat: no-repeat;
             background-position: center center;
             height: 27rem;
             @include breakpoint-up(medium) {
-                background-image: url(/images/heroMobile.svg);
+                background-image: url(../images/heroMobile.svg);
                 background-size: 33%;
             }
             @include breakpoint-up(large) {
-                background-image: url(/images/heroDesktop.svg);
+                background-image: url(../images/heroDesktop.svg);
                 height: 100%;
                 background-size: 70%;
             }
