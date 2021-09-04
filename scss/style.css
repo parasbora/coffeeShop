@@ -90,7 +90,7 @@
 
 .hero__image {
   position: relative;
-  background-image: url(/images/backgroundMobile.svg);
+  background-image: url(../images/backgroundMobile.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -99,7 +99,7 @@
 
 @media (min-width: 64em) {
   .hero__image {
-    background-image: url(/images/backgroundDesktop.svg);
+    background-image: url(../images/backgroundDesktop.svg);
     height: 90vh;
     -webkit-box-flex: 2.5;
         -ms-flex: 2.5;
@@ -111,7 +111,7 @@
   content: "";
   width: 100%;
   position: absolute;
-  background-image: url(/images/heroMobile.svg);
+  background-image: url(../images/heroMobile.svg);
   background-size: 70%;
   background-repeat: no-repeat;
   background-position: center center;
@@ -120,14 +120,14 @@
 
 @media (min-width: 40em) {
   .hero__image::before {
-    background-image: url(/images/heroMobile.svg);
+    background-image: url(../images/heroMobile.svg);
     background-size: 33%;
   }
 }
 
 @media (min-width: 64em) {
   .hero__image::before {
-    background-image: url(/images/heroDesktop.svg);
+    background-image: url(../images/heroDesktop.svg);
     height: 100%;
     background-size: 70%;
   }
